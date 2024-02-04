@@ -1,0 +1,51 @@
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">Caffee World</a></h1>
+
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          {% if is_login %}
+          <li><a class="nav-link scrollto active" href="#hero"><h4>Home</h4></a></li>
+           <li><a class="nav-link scrollto active" href="{{url_for('logout')}}"><h4>Logout</h4></a></li>
+
+
+
+          {% else %}
+          <li><a class="nav-link scrollto active" href="#hero"><h4>Home</h4></a></li>
+          <li><a class="nav-link scrollto active" href="{{url_for('register')}}"><h4>Join Community</h4></a></li>
+          <li><a class="nav-link scrollto active" href="{{url_for('login')}}"><h4>Login</h4></a></li>
+    {% endif %}
+
+
+
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a href="{{url_for('add_cafe')}}" class="book-a-table-btn scrollto d-none d-lg-flex">Suggest Cafe</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero"  style='background-image: url("https://atlondonbridge.com/wp-content/uploads/2019/02/Pano_9758_9761-Edit-190918_LTS_Science_Gallery-Medium-Crop-V2.jpg")' class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>Welcome to <span>London Caffe</span></h1>
+
+
+          <div class="btns">
+
+            <a href="#menu" class="btn-book animated fadeInUp scrollto">All Our Recommendation</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
